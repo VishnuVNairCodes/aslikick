@@ -3,12 +3,28 @@
   "description": "Browser new tab extension that helps you focus on what you rea",
   "version": "1.0.0",
   "manifest_version": 3,
-  "icons": {
-    "128": "logo128.png",
-    "48": "logo48.png",
-    "32": "logo32.png",
-    "16": "logo16.png"
-  },
+  "icons": [
+    {
+      "src": "logo128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "logo48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "logo32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "logo16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
   "action": {
     "default_title": "Aslikik",
     "default_icon": {
