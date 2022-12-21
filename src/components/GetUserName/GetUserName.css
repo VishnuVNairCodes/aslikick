@@ -1,0 +1,28 @@
+.get-user-name {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-twentys);
+  font-size: var(--f-fiftys);
+  font-weight: var(--fwt-bold);
+}
+
+.get-user-name-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--clr-primary);
+  outline: none;
+  color: var(--clr-primary);
+  text-align: center;
+}
+
+.get-user-name .btn-primary-outline {
+  background-color: transparent;
+  align-self: center;
+  font-size: var(--f-thirtys1);
+  font-weight: var(--fwt-bold);
+}
+
+.get-user-name .btn-primary-outline:hover {
+  color: var(--clr-primary-hover);
+  border: 1px solid var(--clr-primary-hover);
+}
