@@ -1,3 +1,26 @@
-.App {
+:root {
+  --clr-primary: #fff;
+  --clr-primary-hover: #e6e6e6;
+}
+
+.app-container {
+  height: 100vh;
+  color: var(--clr-primary);
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.6),
+      rgba(34, 34, 34, 0.6)
+    ),
+    url("https://source.unsplash.com/random/1920x1080/?nature,city,night");
+  background-size: cover;
+  padding: var(--sp-twentys);
   text-align: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: var(--sp-twentys);
 }
