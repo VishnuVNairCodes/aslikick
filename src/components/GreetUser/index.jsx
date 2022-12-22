@@ -1,10 +1,11 @@
+import { useClock } from "../../custom-hooks/useClock";
 import "./GreetUser.css";
 
 const GreetUser = ({ userName }) => {
   return (
     <main className="greeting-container">
       <section>
-        <p className="greeting-time">8:44</p>
+        <p className="greeting-time">{useClock()}</p>
         <p className="greeting-msg">Good Morning, {userName}</p>
       </section>
       <section className="focus-container">
