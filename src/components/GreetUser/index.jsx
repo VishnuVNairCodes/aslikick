@@ -2,11 +2,14 @@ import { useClock } from "../../custom-hooks/useClock";
 import "./GreetUser.css";
 
 const GreetUser = ({ userName }) => {
+  const { currentTimeInPreferredFormat: currentTime, greetingMsg } = useClock();
   return (
     <main className="greeting-container">
       <section>
-        <p className="greeting-time">{useClock()}</p>
-        <p className="greeting-msg">Good Morning, {userName}</p>
+        <p className="greeting-time">{currentTime}</p>
+        <p className="greeting-msg">
+          {greetingMsg}, {userName}
+        </p>
       </section>
       <section className="focus-container">
         <p>What is your main focus for today?</p>
