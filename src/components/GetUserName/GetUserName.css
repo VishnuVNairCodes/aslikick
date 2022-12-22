@@ -26,3 +26,7 @@
   color: var(--clr-primary-hover);
   border: 1px solid var(--clr-primary-hover);
 }
+
+.get-user-name .fa-angle-right {
+  font-size: var(--f-twentys1);
+}
