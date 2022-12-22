@@ -1,11 +1,11 @@
 import "./GreetUser.css";
 
-const GreetUser = () => {
+const GreetUser = ({ userName }) => {
   return (
     <main className="greeting-container">
       <section>
         <p className="greeting-time">8:44</p>
-        <p className="greeting-msg">Good Morning, Vishnu</p>
+        <p className="greeting-msg">Good Morning, {userName}</p>
       </section>
       <section className="focus-container">
         <p>What is your main focus for today?</p>
