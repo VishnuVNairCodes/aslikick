@@ -3,24 +3,16 @@
   flex-direction: column;
   gap: var(--sp-fourtys);
   margin-top: auto;
-  /* background-color: blueviolet; */
 }
 
 .greeting-time {
   font-size: 1050%;
   font-weight: var(--fwt-bold);
-  /* background-color: purple; */
 }
 
 .greeting-msg {
   font-size: var(--f-fourtys);
   font-weight: var(--fwt-bold);
-  /* background-color: blue; */
-}
-
-.focus-container {
-  font-size: var(--f-thirtys2);
-  /* background-color: brown; */
 }
 
 .focus-input {
@@ -32,26 +24,29 @@
   text-align: center;
 }
 
+.focus-container {
+  font-size: var(--f-thirtys2);
+}
+
 .focus-container .checkbox-container {
-  font-size: var(--f-tens4);
-  font-weight: var(--fwt-bold);
+  margin-top: var(--sp-fractions2);
+  font-size: var(--f-twentys3);
 }
 
 .focus-container .checkbox {
-  width: var(--sp-tens2);
-  height: var(--sp-tens2);
+  width: var(--sp-twentys);
+  height: var(--sp-twentys);
 }
 
 .focus {
-  margin-top: var(--sp-fractions2);
-  font-size: var(--f-twentys3);
+  font-size: var(--f-tens5);
+  font-weight: var(--fwt-bold);
 }
 
 .quote-container {
   margin-top: auto;
   width: 70%;
   margin: 0 auto;
-  /* background-color: peru; */
 }
 
 .quote-container span {
