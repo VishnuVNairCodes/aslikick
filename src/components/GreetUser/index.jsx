@@ -1,8 +1,29 @@
+import { useEffect, useState } from "react";
 import { useClock } from "../../custom-hooks/useClock";
 import "./GreetUser.css";
 
 const GreetUser = ({ userName }) => {
   const { currentTimeInPreferredFormat: currentTime, greetingMsg } = useClock();
+
+  const mainFocusOnInitialRender = localStorage.getItem("mainFocus") ?? "";
+  const isMainFocusDoneOnInitialRender =
+    localStorage.getItem("isMainFocusDone") ?? false;
+  const [mainFocus, setMainFocus] = useState(mainFocusOnInitialRender);
+  const [mainFocusInput, setMainFocusInput] = useState("");
+  const [isMainFocusDone, setIsMainFocusDone] = useState(
+    JSON.parse(isMainFocusDoneOnInitialRender)
+  );
+
+  const handleFocusSubmit = (e) => {
+    e.preventDefault();
+    setMainFocus(mainFocusInput);
+  };
+
+  useEffect(() => {
+    localStorage.setItem("mainFocus", mainFocus);
+    localStorage.setItem("isMainFocusDone", isMainFocusDone);
+  }, [mainFocus, isMainFocusDone]);
+
   return (
     <main className="greeting-container">
       <section>
@@ -12,15 +33,31 @@ const GreetUser = ({ userName }) => {
         </p>
       </section>
       <section className="focus-container">
-        <p>What is your main focus for today?</p>
-        <input className="focus-input" />
-        {/* <div className="checkbox-container">
-          <label>
-            <input type="checkbox" class="checkbox" />
-            TODAY
-          </label>
-        </div>
-        <p className="focus">4th Project</p> */}
+        {mainFocus ? (
+          <>
+            <p className="focus">TODAY</p>
+            <div className="checkbox-container">
+              <label>
+                <input
+                  type="checkbox"
+                  checked={isMainFocusDone}
+                  onChange={() => setIsMainFocusDone((prev) => !prev)}
+                  className="checkbox"
+                />
+                {isMainFocusDone ? <del>{mainFocus}</del> : <p>{mainFocus}</p>}
+              </label>
+            </div>
+          </>
+        ) : (
+          <form onSubmit={handleFocusSubmit}>
+            <p>What is your main focus for today?</p>
+            <input
+              value={mainFocusInput}
+              onChange={(e) => setMainFocusInput(e.target.value)}
+              className="focus-input"
+            />
+          </form>
+        )}
       </section>
       <section className="quote-container">
         <p>
