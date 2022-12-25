@@ -15,32 +15,8 @@
   font-weight: var(--fwt-bold);
 }
 
-.focus-input {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid var(--clr-primary);
-  outline: none;
-  color: var(--clr-primary);
-  text-align: center;
-}
-
 .focus-container {
   font-size: var(--f-thirtys2);
-}
-
-.focus-container .checkbox-container {
-  margin-top: var(--sp-fractions2);
-  font-size: var(--f-twentys3);
-}
-
-.focus-container .checkbox {
-  width: var(--sp-twentys);
-  height: var(--sp-twentys);
-}
-
-.focus {
-  font-size: var(--f-tens5);
-  font-weight: var(--fwt-bold);
 }
 
 .quote-container {

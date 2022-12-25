@@ -1,0 +1,20 @@
+.today-focus-heading {
+  font-size: var(--f-tens5);
+  font-weight: var(--fwt-bold);
+}
+
+.today-focus.checkbox-container {
+  margin-top: var(--sp-fractions2);
+  font-size: var(--f-twentys3);
+  gap: var(--sp-tens2);
+  align-items: flex-end;
+}
+
+.today-focus .checkbox {
+  width: var(--sp-twentys);
+  height: var(--sp-twentys);
+}
+
+.today-focus-btn-container .btn-icon {
+  font-size: var(--f-tens4);
+}
