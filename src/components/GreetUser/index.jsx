@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import { useClock } from "../../custom-hooks/useClock";
 import { AskTodayFocus } from "../AskTodayFocus";
+import { ClockWithGreeting } from "../ClockWithGreeting";
+import { Quote } from "../Quote";
 import { TodayFocus } from "../TodayFocus";
 import "./GreetUser.css";
 
 const GreetUser = ({ userName }) => {
-  const { currentTimeInPreferredFormat: currentTime, greetingMsg } = useClock();
-
   const [mainFocusInput, setMainFocusInput] = useState("");
   const mainFocusOnInitialRender = localStorage.getItem("mainFocus") ?? "";
   const [mainFocus, setMainFocus] = useState(mainFocusOnInitialRender);
@@ -17,12 +16,7 @@ const GreetUser = ({ userName }) => {
 
   return (
     <main className="greeting-container">
-      <section>
-        <p className="greeting-time">{currentTime}</p>
-        <p className="greeting-msg">
-          {greetingMsg}, {userName}
-        </p>
-      </section>
+      <ClockWithGreeting userName={userName} />
       <section className="focus-container">
         {mainFocus ? (
           <TodayFocus
@@ -38,11 +32,7 @@ const GreetUser = ({ userName }) => {
           />
         )}
       </section>
-      <section className="quote-container">
-        <p>
-          <em>"Proof of work is the way to go "</em> - <span>Swapnil</span>
-        </p>
-      </section>
+      <Quote />
     </main>
   );
 };

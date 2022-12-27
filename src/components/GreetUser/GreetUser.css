@@ -6,25 +6,6 @@
   align-items: center;
 }
 
-.greeting-time {
-  font-size: 1050%;
-  font-weight: var(--fwt-bold);
-}
-
-.greeting-msg {
-  font-size: var(--f-fourtys);
-  font-weight: var(--fwt-bold);
-}
-
 .focus-container {
   font-size: var(--f-thirtys2);
-}
-
-.quote-container {
-  margin-top: auto;
-  width: 70%;
-}
-
-.quote-container span {
-  font-size: var(--f-tens3);
 }
