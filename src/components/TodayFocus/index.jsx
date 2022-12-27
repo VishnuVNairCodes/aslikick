@@ -7,6 +7,17 @@ const TodayFocus = ({ mainFocus, setMainFocus, setMainFocusInput }) => {
   const [isMainFocusDone, setIsMainFocusDone] = useState(
     JSON.parse(isMainFocusDoneOnInitialRender)
   );
+  const getTodayFocusDoneMessage = () => {
+    const messages = [
+      "Way to Go!",
+      "Nice!",
+      "Great Work!",
+      "Kudos!",
+      "Good job!",
+    ];
+    return messages[Math.floor(Math.random() * 5)];
+  };
+
   const handleEditFocus = () => {
     setMainFocusInput(mainFocus);
     setMainFocus("");
@@ -15,9 +26,11 @@ const TodayFocus = ({ mainFocus, setMainFocus, setMainFocusInput }) => {
     setMainFocusInput("");
     setMainFocus("");
   };
+
   useEffect(() => {
     localStorage.setItem("isMainFocusDone", isMainFocusDone);
   }, [isMainFocusDone]);
+
   return (
     <>
       <p className="today-focus-heading">TODAY</p>
@@ -39,6 +52,9 @@ const TodayFocus = ({ mainFocus, setMainFocus, setMainFocusInput }) => {
             <i className="fa-solid fa-trash"></i>
           </button>
         </section>
+        {isMainFocusDone && (
+          <p className="today-focus-done-msg">{getTodayFocusDoneMessage()}</p>
+        )}
       </div>
     </>
   );

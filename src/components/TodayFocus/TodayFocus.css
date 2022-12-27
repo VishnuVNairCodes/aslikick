@@ -1,3 +1,48 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .today-focus-heading {
   font-size: var(--f-tens5);
   font-weight: var(--fwt-bold);
@@ -5,9 +50,11 @@
 
 .today-focus.checkbox-container {
   margin-top: var(--sp-fractions2);
+  margin-bottom: var(--sp-fourtys);
   font-size: var(--f-twentys3);
   gap: var(--sp-tens2);
   align-items: flex-end;
+  position: relative;
 }
 
 .today-focus .checkbox {
@@ -17,4 +64,16 @@
 
 .today-focus-btn-container .btn-icon {
   font-size: var(--f-tens4);
+}
+
+.today-focus-done-msg {
+  font-size: var(--f-tens5);
+  margin-top: var(--sp-tens2);
+  position: absolute;
+  top: var(--sp-fourtys);
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
 }
