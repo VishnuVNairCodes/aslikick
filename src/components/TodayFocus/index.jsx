@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { getRandomInt } from "../../utils";
 import "./TodayFocus.css";
 
 const TodayFocus = ({ mainFocus, setMainFocus, setMainFocusInput }) => {
@@ -15,7 +16,7 @@ const TodayFocus = ({ mainFocus, setMainFocus, setMainFocusInput }) => {
       "Kudos!",
       "Good job!",
     ];
-    return messages[Math.floor(Math.random() * 5)];
+    return messages[getRandomInt(5)];
   };
 
   const handleEditFocus = () => {

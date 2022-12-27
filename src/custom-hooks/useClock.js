@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { getCurrentTime } from "../utils/get-current-time";
+import { getCurrentTime } from "../utils";
 
 const useClock = () => {
   const is24HourPreferred = false;
-
   const [currentTime, setCurrentTime] = useState(getCurrentTime());
-
   const [currentHours, currentMinutes] = currentTime.split(":");
 
   const getCurrentTimeInPreferredFormat = () => {
