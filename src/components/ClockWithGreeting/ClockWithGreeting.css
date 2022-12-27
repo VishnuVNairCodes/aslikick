@@ -1,0 +1,9 @@
+.clock-greeting-time {
+  font-size: 1050%;
+  font-weight: var(--fwt-bold);
+}
+
+.clock-greeting-msg {
+  font-size: var(--f-fourtys);
+  font-weight: var(--fwt-bold);
+}

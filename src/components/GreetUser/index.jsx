@@ -1,28 +1,38 @@
+import { useEffect, useState } from "react";
+import { AskTodayFocus } from "../AskTodayFocus";
+import { ClockWithGreeting } from "../ClockWithGreeting";
+import { Quote } from "../Quote";
+import { TodayFocus } from "../TodayFocus";
 import "./GreetUser.css";
 
-const GreetUser = () => {
+const GreetUser = ({ userName }) => {
+  const [mainFocusInput, setMainFocusInput] = useState("");
+  const mainFocusOnInitialRender = localStorage.getItem("mainFocus") ?? "";
+  const [mainFocus, setMainFocus] = useState(mainFocusOnInitialRender);
+
+  useEffect(() => {
+    localStorage.setItem("mainFocus", mainFocus);
+  }, [mainFocus]);
+
   return (
     <main className="greeting-container">
-      <section>
-        <p className="greeting-time">8:44</p>
-        <p className="greeting-msg">Good Morning, Vishnu</p>
-      </section>
+      <ClockWithGreeting userName={userName} />
       <section className="focus-container">
-        <p>What is your main focus for today?</p>
-        <input className="focus-input" />
-        {/* <div className="checkbox-container">
-          <label>
-            <input type="checkbox" class="checkbox" />
-            TODAY
-          </label>
-        </div>
-        <p className="focus">4th Project</p> */}
+        {mainFocus ? (
+          <TodayFocus
+            mainFocus={mainFocus}
+            setMainFocus={setMainFocus}
+            setMainFocusInput={setMainFocusInput}
+          />
+        ) : (
+          <AskTodayFocus
+            setMainFocus={setMainFocus}
+            mainFocusInput={mainFocusInput}
+            setMainFocusInput={setMainFocusInput}
+          />
+        )}
       </section>
-      <section className="quote-container">
-        <p>
-          <em>"Proof of work is the way to go "</em> - <span>Swapnil</span>
-        </p>
-      </section>
+      <Quote />
     </main>
   );
 };

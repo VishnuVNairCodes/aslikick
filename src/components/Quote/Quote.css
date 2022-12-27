@@ -1,0 +1,9 @@
+.quote-container {
+  margin-top: auto;
+  line-height: var(--sp-twentys);
+}
+
+.quote-container span {
+  display: block;
+  font-size: var(--f-tens3);
+}

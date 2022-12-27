@@ -15,7 +15,11 @@ function App() {
   return (
     <div className="app-container">
       <div className="app">
-        {userName ? <GreetUser /> : <GetUserName setUserName={setUserName} />}
+        {userName ? (
+          <GreetUser userName={userName} />
+        ) : (
+          <GetUserName setUserName={setUserName} />
+        )}
       </div>
     </div>
   );
