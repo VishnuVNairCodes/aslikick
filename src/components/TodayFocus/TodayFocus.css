@@ -68,9 +68,8 @@
 
 .today-focus-done-msg {
   font-size: var(--f-tens5);
-  margin-top: var(--sp-tens2);
   position: absolute;
-  top: var(--sp-fourtys);
+  top: var(--sp-sixtys);
   animation: fadeIn 2s;
   -webkit-animation: fadeIn 2s;
   -moz-animation: fadeIn 2s;
