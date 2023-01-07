@@ -1,5 +1,5 @@
 .quote-container {
-  margin-top: auto;
+  margin-top: var(--sp-thirtys);
   line-height: var(--sp-twentys);
 }
 
