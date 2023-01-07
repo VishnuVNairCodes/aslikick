@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { GetUserName } from "./components/GetUserName";
 import { GreetUser } from "./components/GreetUser";
+import { Quote } from "./components/Quote";
 
 function App() {
   const userNameOnInitialRender = () => localStorage.getItem("userName") ?? "";
@@ -16,7 +17,10 @@ function App() {
     <div className="app-container">
       <div className="app">
         {userName ? (
-          <GreetUser userName={userName} />
+          <>
+            <GreetUser userName={userName} />
+            <Quote />
+          </>
         ) : (
           <GetUserName setUserName={setUserName} />
         )}

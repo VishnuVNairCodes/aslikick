@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { AskTodayFocus } from "../AskTodayFocus";
 import { ClockWithGreeting } from "../ClockWithGreeting";
-import { Quote } from "../Quote";
 import { TodayFocus } from "../TodayFocus";
 import "./GreetUser.css";
 
@@ -32,7 +31,6 @@ const GreetUser = ({ userName }) => {
           />
         )}
       </section>
-      <Quote />
     </main>
   );
 };
